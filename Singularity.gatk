@@ -1,0 +1,13 @@
+Bootstrap: docker
+FROM: openjdk:alpine
+
+%post
+    apk --update --no-cache add python python3
+    export JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk
+    wget https://github.com/broadinstitute/gatk/releases/download/4.0.1.2/gatk-4.0.1.2.zip
+    unzip gatk-4.0.1.2.zip
+    rm -f gatk-4.0.1.2.zip
+    mv gatk-4.0.1.2 /data/
+
+%runscript
+    /data/gatk "$@"
