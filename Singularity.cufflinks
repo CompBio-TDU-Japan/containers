@@ -18,6 +18,3 @@ From:alpine
     apk del build-deps
     rm -r /usr/glibc-compat/bin
     rm -r /usr/glibc-compat/sbin
-
-
-%runscript
