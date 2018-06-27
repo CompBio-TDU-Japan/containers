@@ -2,8 +2,8 @@ Bootstrap: docker
 FROM: alpine
 
 %post
-    apk --update --no-cache add --virtual=build-deps ca-certificates wget build-base git
-    apk --no-cache add libbz2 bash python3-dev python3 openjdk8
+    apk --update --no-cache add --virtual=build-deps ca-certificates build-base git
+    apk --no-cache add libbz2 bash python3-dev python3 openjdk8 wget
     pip3 install --upgrade pip
     pip3 install --upgrade setuptools
     LANG="en_US.UTF-8"
