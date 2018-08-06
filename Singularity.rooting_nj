@@ -57,7 +57,7 @@ FROM: alpine
     mv ncbi-blast-2.4.0+/bin/psiblast /usr/local/bin/
     mv ncbi-blast-2.4.0+/bin/blastdbcmd /usr/local/bin/
 ## Rooting_NJ install
-    git clone https://github.com/CompBio-TDU-Japan/Rooting_NJ.git
+    git clone https://github.com/biosugar0/Rooting_NJ
 ##clean
     rm glibc*.apk
     rm "/root/.wget-hsts"
