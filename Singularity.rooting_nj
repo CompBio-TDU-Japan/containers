@@ -68,3 +68,7 @@ FROM: alpine
     apk del build-deps
     rm -r /usr/glibc-compat/bin
     rm -r /usr/glibc-compat/sbin
+
+%help
+
+bio tools v1.5
