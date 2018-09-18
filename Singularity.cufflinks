@@ -8,7 +8,8 @@ From:alpine
     wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.27-r0/glibc-2.27-r0.apk
     wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.27-r0/glibc-bin-2.27-r0.apk
     apk --no-cache add -v glibc-2.27-r0.apk
-    apk --no-cache add -v glibc-bin-2.27-r0.apk
+    apk --no-cache add -v glibc-2.27-r0.apk
+    apk --no-cache add python-dev python
     rm glibc*.apk
     tar -zxvf cufflinks-2.2.1.Linux_x86_64.tar.gz
     mv cufflinks-2.2.1.Linux_x86_64/cuff* /usr/local/bin/
