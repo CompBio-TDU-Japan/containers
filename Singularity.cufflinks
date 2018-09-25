@@ -13,6 +13,7 @@ From:alpine
     wget http://cole-trapnell-lab.github.io/cufflinks/assets/downloads/cufflinks-2.2.1.Linux_x86_64.tar.gz
     tar -zxvf cufflinks-2.2.1.Linux_x86_64.tar.gz
     mv cufflinks-2.2.1.Linux_x86_64/cuff* /usr/local/bin/
+    mv cufflinks-2.2.1.Linux_x86_64/g* /usr/local/bin/
     rm cufflinks-2.2.1.Linux_x86_64.tar.gz
     rm -r cufflinks-2.2.1.Linux_x86_64
     rm "/etc/apk/keys/sgerrand.rsa.pub"
