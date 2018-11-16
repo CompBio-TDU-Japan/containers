@@ -2,7 +2,7 @@ Bootstrap: docker
 FROM: alpine
 
 %post
-    apk add --update --no-cache perl bzip2-dev xz-dev libstdc++
+    apk add --update --no-cache perl bash bzip2-dev xz-dev libstdc++
     apk add --update --no-cache --virtual build-deps autoconf automake libtool git build-base zlib-dev
     git clone https://github.com/vcftools/vcftools.git
     git clone https://github.com/samtools/htslib.git
