@@ -3,7 +3,7 @@ FROM: openjdk:alpine
 
 %post
     VERSION=4.0.11.0
-    apk --update --no-cache add python python3
+    apk --update --no-cache add bash python python3
     export JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk
     wget https://github.com/broadinstitute/gatk/releases/download/$VERSION/gatk-$VERSION.zip
     unzip gatk-$VERSION.zip
