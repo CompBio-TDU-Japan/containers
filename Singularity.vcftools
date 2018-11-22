@@ -28,3 +28,6 @@ FROM: alpine
 
 %apprun tabix
     tabix "$@"
+
+%labels
+    Version v0.5
