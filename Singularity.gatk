@@ -1,14 +1,15 @@
 Bootstrap: docker
-FROM: openjdk:alpine
+FROM: broadinstitute/gatk:gatkbase-2.0.2
 
 %post
+    apt-get clean -y
+    apt-get autoclean -y
+    apt-get autoremove -y
     VERSION=4.0.11.0
-    apk --update --no-cache add bash python python3
     export JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk
     wget https://github.com/broadinstitute/gatk/releases/download/$VERSION/gatk-$VERSION.zip
     unzip gatk-$VERSION.zip
     rm -f gatk-$VERSION.zip
     mv gatk-$VERSION /data/
-
-%runscript
-    /data/gatk "$@"
+    rm -r /data/gatkdoc
+    ulimit -c unlimited
